@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Author: Dang Kai
 # @Date: 2018-08-01 11:10:05
-# @Last Modified time: 2018-08-02 09:44:42
+# @Last Modified time: 2018-08-02 11:13:14
 # @E-mail: 1370465454@qq.com
 # @Description:
 
@@ -38,3 +38,5 @@ class QuestionModelTests(TestCase):
         time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
         recent_question = Question(pub_date=time)
         self.assertIs(recent_question.was_published_recently(), True)
+
+
